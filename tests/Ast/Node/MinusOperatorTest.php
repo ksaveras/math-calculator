@@ -60,11 +60,11 @@ class MinusOperatorTest extends TestCase
         yield [[new Number(0), new Number(2)], -2];
         yield [[new Number(5), new Number(0)], 5];
         yield [[new Number(3.6), new Number(2.3)], 1.3];
+        yield [[new Number(10)], -10];
     }
 
     public function missingNodesDataProvider(): \Generator
     {
         yield [[]];
-        yield [[new Number(1)]];
     }
 }

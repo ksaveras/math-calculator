@@ -22,7 +22,11 @@ class MinusOperator extends AbstractOperator
         $op2 = array_pop($stack);
         $op1 = array_pop($stack);
 
-        if (null === $op1 || null === $op2) {
+        if (null === $op1) {
+            $op1 = new Number(0);
+        }
+
+        if (null === $op2) {
             throw new \RuntimeException('Operator requires two nodes');
         }
 
