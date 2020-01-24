@@ -12,7 +12,7 @@ class PlusOperator implements OperatorInterface
     /**
      * {@inheritdoc}
      */
-    public function execute(array $stack)
+    public function execute(array &$stack)
     {
         $op2 = array_pop($stack);
         $op1 = array_pop($stack);

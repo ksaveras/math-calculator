@@ -24,6 +24,23 @@ class PlusOperatorTest extends TestCase
         $this->assertEquals($expected, $result->getValue());
     }
 
+    public function testStackSize(): void
+    {
+        $stack = [
+            new Number(1),
+            new Number(2),
+            new Number(3),
+        ];
+
+        $operator = new PlusOperator();
+        $result = $operator->execute($stack);
+
+        $this->assertEquals(5, $result->getValue());
+
+        $this->assertCount(1, $stack);
+    }
+
+
     /**
      * @dataProvider missingNodesDataProvider
      *

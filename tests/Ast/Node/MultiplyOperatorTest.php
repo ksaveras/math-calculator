@@ -24,6 +24,22 @@ class MultiplyOperatorTest extends TestCase
         $this->assertEquals($expected, $result->getValue());
     }
 
+    public function testStackSize(): void
+    {
+        $stack = [
+            new Number(1),
+            new Number(2),
+            new Number(3),
+        ];
+
+        $operator = new MultiplyOperator();
+        $result = $operator->execute($stack);
+
+        $this->assertEquals(6, $result->getValue());
+
+        $this->assertCount(1, $stack);
+    }
+
     /**
      * @dataProvider missingNodesDataProvider
      *

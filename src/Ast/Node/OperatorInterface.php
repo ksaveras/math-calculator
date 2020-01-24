@@ -14,5 +14,5 @@ interface OperatorInterface
      *
      * @return mixed
      */
-    public function execute(array $stack);
+    public function execute(array &$stack);
 }

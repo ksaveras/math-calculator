@@ -24,6 +24,22 @@ class MinusOperatorTest extends TestCase
         $this->assertEquals($expected, $result->getValue());
     }
 
+    public function testStackSize(): void
+    {
+        $stack = [
+            new Number(1),
+            new Number(2),
+            new Number(3),
+        ];
+
+        $operator = new MinusOperator();
+        $result = $operator->execute($stack);
+
+        $this->assertEquals(-1, $result->getValue());
+
+        $this->assertCount(1, $stack);
+    }
+
     /**
      * @dataProvider missingNodesDataProvider
      *
