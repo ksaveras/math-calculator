@@ -40,7 +40,6 @@ class PlusOperatorTest extends TestCase
         $this->assertCount(1, $stack);
     }
 
-
     /**
      * @dataProvider missingNodesDataProvider
      *
