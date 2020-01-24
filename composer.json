@@ -1,0 +1,31 @@
+{
+    "name": "ksaveras/math-calculator",
+    "type": "library",
+    "description": "Simple math expresion parser and calculator",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ksaveras Sakys",
+            "email": "xawiers@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "autoload": {
+        "psr-4": {
+            "Ksaveras\\MathCalculator\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Ksaveras\\MathCalculator\\Test\\": "tests"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "require-dev": {
+        "phpunit/phpunit": "8.5.2"
+    }
+}
