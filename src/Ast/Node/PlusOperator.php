@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ksaveras\MathCalculator\Ast\Node;
 
 /**
@@ -8,9 +10,7 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 class PlusOperator implements OperatorInterface
 {
     /**
-     * @param array $stack
-     *
-     * @return mixed
+     * {@inheritdoc}
      */
     public function execute(array $stack)
     {

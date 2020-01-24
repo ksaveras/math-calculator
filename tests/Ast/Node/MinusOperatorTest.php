@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace Ksaveras\MathCalculator\Test\Ast\Node;
 
 use Ksaveras\MathCalculator\Ast\Node\MinusOperator;

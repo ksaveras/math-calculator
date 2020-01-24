@@ -10,9 +10,7 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 class MultiplyOperator implements OperatorInterface
 {
     /**
-     * @param array $stack
-     *
-     * @return mixed
+     * {@inheritdoc}
      */
     public function execute(array $stack)
     {
