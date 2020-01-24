@@ -41,6 +41,7 @@ class PlusOperatorTest extends TestCase
         yield [[new Number(-5), new Number(2)], -3];
         yield [[new Number(0), new Number(2)], 2];
         yield [[new Number(5), new Number(0)], 5];
+        yield [[new Number(2.5), new Number(3.6)], 6.1];
     }
 
     public function missingNodesDataProvider(): \Generator
