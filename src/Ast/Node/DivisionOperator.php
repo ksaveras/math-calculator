@@ -7,8 +7,13 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 /**
  * Class DivisionOperator.
  */
-class DivisionOperator implements OperatorInterface
+class DivisionOperator extends AbstractOperator
 {
+    public function getPriority(): int
+    {
+        return 4;
+    }
+
     /**
      * {@inheritdoc}
      */

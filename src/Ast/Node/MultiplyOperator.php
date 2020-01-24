@@ -7,8 +7,13 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 /**
  * Class MultiplyOperator.
  */
-class MultiplyOperator implements OperatorInterface
+class MultiplyOperator extends AbstractOperator
 {
+    public function getPriority(): int
+    {
+        return 4;
+    }
+
     /**
      * {@inheritdoc}
      */

@@ -7,8 +7,13 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 /**
  * Class MinusOperator.
  */
-class MinusOperator implements OperatorInterface
+class MinusOperator extends AbstractOperator
 {
+    public function getPriority(): int
+    {
+        return 3;
+    }
+
     /**
      * {@inheritdoc}
      */

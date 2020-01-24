@@ -10,6 +10,18 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 interface OperatorInterface
 {
     /**
+     * @return int
+     */
+    public function getPriority(): int;
+
+    /**
+     * @param mixed $node
+     *
+     * @return bool
+     */
+    public function isLowerPriority($node): bool;
+
+    /**
      * @param array $stack
      *
      * @return mixed

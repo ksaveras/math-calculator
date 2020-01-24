@@ -7,8 +7,13 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 /**
  * Class BitwiseOrOperator.
  */
-class BitwiseOrOperator implements OperatorInterface
+class BitwiseOrOperator extends AbstractOperator
 {
+    public function getPriority(): int
+    {
+        return 5;
+    }
+
     /**
      * {@inheritdoc}
      */
