@@ -18,6 +18,10 @@ class Calculator
      */
     public function calculate(array $rpnNodes)
     {
+        if (0 === \count($rpnNodes)) {
+            throw new \InvalidArgumentException('Got empty list of RPN nodes');
+        }
+
         $stack = [];
         foreach ($rpnNodes as $node) {
             if ($node instanceof Number) {
