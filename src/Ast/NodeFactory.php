@@ -9,6 +9,7 @@ use Ksaveras\MathCalculator\Ast\Node\BitwiseOrOperator;
 use Ksaveras\MathCalculator\Ast\Node\DivisionOperator;
 use Ksaveras\MathCalculator\Ast\Node\MinusOperator;
 use Ksaveras\MathCalculator\Ast\Node\MultiplyOperator;
+use Ksaveras\MathCalculator\Ast\Node\NodeInterface;
 use Ksaveras\MathCalculator\Ast\Node\Number;
 use Ksaveras\MathCalculator\Ast\Node\PlusOperator;
 
@@ -17,10 +18,15 @@ use Ksaveras\MathCalculator\Ast\Node\PlusOperator;
  */
 class NodeFactory
 {
-    public function createNode($token)
+    /**
+     * @param $token
+     *
+     * @return NodeInterface
+     */
+    public function createNode($token): NodeInterface
     {
         if (is_numeric($token)) {
-            settype($token, gettype($token));
+            $token += 0;
             return new Number($token);
         }
 
@@ -43,6 +49,6 @@ class NodeFactory
             return new BitwiseAndOperator();
         }
 
-        throw new \LogicException('Unsupported token '.$token);
+        throw new \LogicException(sprintf('Unsupported token "%s"', $token));
     }
 }
