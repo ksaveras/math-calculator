@@ -13,7 +13,6 @@ class MultiplyOperatorTest extends TestCase
     /**
      * @dataProvider operatorDataProvider
      *
-     * @param array $stack
      * @param mixed $expected
      */
     public function testExecute(array $stack, $expected): void
@@ -42,8 +41,6 @@ class MultiplyOperatorTest extends TestCase
 
     /**
      * @dataProvider missingNodesDataProvider
-     *
-     * @param array $stack
      */
     public function testMissingNodes(array $stack): void
     {

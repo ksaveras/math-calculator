@@ -28,8 +28,6 @@ abstract class AbstractOperator implements OperatorInterface
     }
 
     /**
-     * @param int $priority
-     *
      * @return $this
      */
     public function setPriority(int $priority): self
@@ -48,13 +46,11 @@ abstract class AbstractOperator implements OperatorInterface
     }
 
     /**
-     * @param int $association
-     *
      * @return $this
      */
     public function setAssociation(int $association): self
     {
-        if (!in_array($association, [static::LEFT_ASSOC, static::RIGHT_ASSOC], true)) {
+        if (!\in_array($association, [static::LEFT_ASSOC, static::RIGHT_ASSOC], true)) {
             throw new \InvalidArgumentException('Invalid argument value for association');
         }
 

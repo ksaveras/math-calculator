@@ -30,8 +30,6 @@ class MathCalculator
     }
 
     /**
-     * @param string $expression
-     *
      * @return mixed
      */
     public function calculate(string $expression)

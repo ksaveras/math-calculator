@@ -18,8 +18,7 @@ class LexerTest extends TestCase
     /**
      * @dataProvider lexerDataProvider
      *
-     * @param string $input
-     * @param array  $expected
+     * @param array $expected
      */
     public function testParse(string $input, $expected): void
     {
@@ -47,9 +46,6 @@ class LexerTest extends TestCase
 
     /**
      * @dataProvider nodeStreamDataProvider
-     *
-     * @param array $nodeStream
-     * @param array $expected
      */
     public function testReversePolishNotation(array $nodeStream, array $expected): void
     {

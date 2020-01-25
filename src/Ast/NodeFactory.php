@@ -20,13 +20,12 @@ class NodeFactory
 {
     /**
      * @param $token
-     *
-     * @return NodeInterface
      */
     public function createNode($token): NodeInterface
     {
         if (is_numeric($token)) {
             $token += 0;
+
             return new Number($token);
         }
 

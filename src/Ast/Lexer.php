@@ -13,8 +13,6 @@ use Ksaveras\MathCalculator\Ast\Node\OperatorInterface;
 class Lexer
 {
     /**
-     * @param string $input
-     *
      * @return NodeInterface[]|array
      */
     public function parse(string $input): array
@@ -26,7 +24,7 @@ class Lexer
 
         $nodeStream = [];
         foreach ($tokens as $token) {
-            if (is_string($token)) {
+            if (\is_string($token)) {
                 $value = $token;
             } elseif (isset($token[0], $token[1]) && T_WHITESPACE !== $token[0]) {
                 $value = $token[1];
@@ -61,10 +59,10 @@ class Lexer
                     }
 
                     while (
-                        ($count = count($stack)) > 0
+                        ($count = \count($stack)) > 0
                         && ($stack[$count - 1] instanceof OperatorInterface
                             && (
-                                ($stack[$count - 1]->getAssociation() === OperatorInterface::LEFT_ASSOC
+                                (OperatorInterface::LEFT_ASSOC === $stack[$count - 1]->getAssociation()
                                     && $stack[$count - 1]->getPriority() === $node->getPriority())
                                 || ($stack[$count - 1]->getPriority() > $node->getPriority())
                             )

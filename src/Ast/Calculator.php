@@ -11,13 +11,11 @@ use Ksaveras\MathCalculator\Ast\Node\OperatorInterface;
 class Calculator
 {
     /**
-     * @param array $rpnNodes
-     *
      * @return mixed
      */
     public function calculate(array $rpnNodes)
     {
-        $stack = array();
+        $stack = [];
         foreach ($rpnNodes as $node) {
             if ($node instanceof Number) {
                 $stack[] = $node;

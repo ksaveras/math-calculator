@@ -11,8 +11,6 @@ class NodeFactoryTest extends TestCase
 {
     /**
      * @dataProvider validTokenProvider
-     *
-     * @param string $token
      */
     public function testCreateNode(string $token): void
     {
@@ -38,8 +36,6 @@ class NodeFactoryTest extends TestCase
 
     /**
      * @dataProvider invalidTokenProvider
-     *
-     * @param string $token
      */
     public function testCreateInvalidToken(string $token): void
     {
