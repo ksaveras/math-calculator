@@ -85,5 +85,7 @@ class DivisionOperatorTest extends TestCase
         yield [[new Number(10), new Number(0)]];
         yield [[new Number(10), new Number(0.0)]];
         yield [[new Number(10), new Number(.0)]];
+        yield [[new Number(10), new Number(-0)]];
+        yield [[new Number(10), new Number(-0.0)]];
     }
 }
