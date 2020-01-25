@@ -7,17 +7,20 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 /**
  * Class MinusOperator.
  */
-class MinusOperator extends AbstractOperator
+final class MinusOperator extends AbstractOperator
 {
-    public function getPriority(): int
+    /**
+     * MinusOperator constructor.
+     */
+    public function __construct()
     {
-        return 3;
+        $this->priority = 3;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function execute(array &$stack)
+    public function execute(array &$stack): AbstractValue
     {
         $op2 = array_pop($stack);
         $op1 = array_pop($stack);

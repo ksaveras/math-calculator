@@ -5,8 +5,8 @@ declare(strict_types=1);
 namespace Ksaveras\MathCalculator\Ast\Node;
 
 /**
- * Class Number.
+ * Interface NodeInterface.
  */
-class Number extends AbstractValue
+interface NodeInterface
 {
 }

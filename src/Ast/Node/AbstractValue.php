@@ -7,8 +7,11 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 /**
  * Class AbstractValue.
  */
-abstract class AbstractValue
+abstract class AbstractValue implements NodeInterface
 {
+    /**
+     * @var mixed
+     */
     private $value;
 
     /**

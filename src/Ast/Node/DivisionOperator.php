@@ -7,17 +7,20 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 /**
  * Class DivisionOperator.
  */
-class DivisionOperator extends AbstractOperator
+final class DivisionOperator extends AbstractOperator
 {
-    public function getPriority(): int
+    /**
+     * DivisionOperator constructor.
+     */
+    public function __construct()
     {
-        return 4;
+        $this->priority = 4;
     }
 
     /**
      * {@inheritdoc}
      */
-    public function execute(array &$stack)
+    public function execute(array &$stack): AbstractValue
     {
         $op2 = array_pop($stack);
         $op1 = array_pop($stack);

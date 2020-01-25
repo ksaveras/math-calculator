@@ -7,24 +7,25 @@ namespace Ksaveras\MathCalculator\Ast\Node;
 /**
  * Interface OperatorInterface.
  */
-interface OperatorInterface
+interface OperatorInterface extends NodeInterface
 {
+    public const LEFT_ASSOC = 1;
+    public const RIGHT_ASSOC = 2;
+
     /**
      * @return int
      */
     public function getPriority(): int;
 
     /**
-     * @param mixed $node
-     *
-     * @return bool
+     * @return int
      */
-    public function isLowerPriority($node): bool;
+    public function getAssociation(): int;
 
     /**
      * @param array $stack
      *
-     * @return mixed
+     * @return AbstractValue
      */
-    public function execute(array &$stack);
+    public function execute(array &$stack): AbstractValue;
 }
