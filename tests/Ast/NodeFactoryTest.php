@@ -20,6 +20,9 @@ class NodeFactoryTest extends TestCase
         $this->assertIsObject($node);
     }
 
+    /**
+     * @return \Generator<array<int, string>>
+     */
     public function validTokenProvider(): \Generator
     {
         yield ['0'];
@@ -46,6 +49,9 @@ class NodeFactoryTest extends TestCase
         $factory->createNode($token);
     }
 
+    /**
+     * @return \Generator<array<int, string>>
+     */
     public function invalidTokenProvider(): \Generator
     {
         yield ['a'];

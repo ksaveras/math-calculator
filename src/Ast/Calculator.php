@@ -2,6 +2,7 @@
 
 namespace Ksaveras\MathCalculator\Ast;
 
+use Ksaveras\MathCalculator\Ast\Node\NodeInterface;
 use Ksaveras\MathCalculator\Ast\Node\Number;
 use Ksaveras\MathCalculator\Ast\Node\OperatorInterface;
 
@@ -11,6 +12,8 @@ use Ksaveras\MathCalculator\Ast\Node\OperatorInterface;
 class Calculator
 {
     /**
+     * @param array<NodeInterface> $rpnNodes
+     *
      * @return mixed
      */
     public function calculate(array $rpnNodes)

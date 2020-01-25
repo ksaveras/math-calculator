@@ -18,10 +18,7 @@ use Ksaveras\MathCalculator\Ast\Node\PlusOperator;
  */
 class NodeFactory
 {
-    /**
-     * @param $token
-     */
-    public function createNode($token): NodeInterface
+    public function createNode(string $token): NodeInterface
     {
         if (is_numeric($token)) {
             $token += 0;

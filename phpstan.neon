@@ -1,5 +1,11 @@
 parameters:
     level: 7
+    checkMissingIterableValueType: false
+
+    ignoreErrors:
+        -
+            message: '#Binary operation "\+=" between string and 0 results in an error\.#'
+            path: src/Ast/NodeFactory.php
 
 includes:
     - vendor/phpstan/phpstan-phpunit/extension.neon

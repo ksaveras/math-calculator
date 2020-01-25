@@ -13,7 +13,7 @@ use Ksaveras\MathCalculator\Ast\Node\OperatorInterface;
 class Lexer
 {
     /**
-     * @return NodeInterface[]|array
+     * @return array<NodeInterface>
      */
     public function parse(string $input): array
     {
@@ -40,6 +40,11 @@ class Lexer
         return $nodeStream;
     }
 
+    /**
+     * @param array<NodeInterface> $nodeStream
+     *
+     * @return array<NodeInterface>
+     */
     public function buildReversePolishNotation(array $nodeStream): array
     {
         $output = [];
