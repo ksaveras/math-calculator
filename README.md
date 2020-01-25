@@ -7,3 +7,14 @@ https://en.wikipedia.org/wiki/Reverse_Polish_notation
 https://en.wikipedia.org/wiki/Shunting-yard_algorithm
 https://en.wikipedia.org/wiki/Operator-precedence_parser
 
+## Tests
+
+```
+composer test
+```
+
+## Code quality
+
+```
+composer phpstan && composer phpcsfix
+```
