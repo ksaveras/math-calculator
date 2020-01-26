@@ -1,4 +1,5 @@
 # Math Calculator
+[![Build Status](https://travis-ci.com/ksaveras/math-calculator.svg?branch=master)](https://travis-ci.com/ksaveras/math-calculator)
 
 References
 
