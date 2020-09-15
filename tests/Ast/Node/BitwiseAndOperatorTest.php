@@ -20,7 +20,7 @@ class BitwiseAndOperatorTest extends TestCase
         $operator = new BitwiseAndOperator();
         $result = $operator->execute($stack);
 
-        $this->assertEquals($expected, $result->getValue());
+        self::assertEquals($expected, $result->getValue());
     }
 
     public function testStackSize(): void
@@ -34,9 +34,9 @@ class BitwiseAndOperatorTest extends TestCase
         $operator = new BitwiseAndOperator();
         $result = $operator->execute($stack);
 
-        $this->assertEquals(2, $result->getValue());
+        self::assertEquals(2, $result->getValue());
 
-        $this->assertCount(1, $stack);
+        self::assertCount(1, $stack);
     }
 
     /**

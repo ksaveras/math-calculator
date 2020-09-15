@@ -20,7 +20,7 @@ class MinusOperatorTest extends TestCase
         $operator = new MinusOperator();
         $result = $operator->execute($stack);
 
-        $this->assertEquals($expected, $result->getValue());
+        self::assertEquals($expected, $result->getValue());
     }
 
     public function testStackSize(): void
@@ -34,9 +34,9 @@ class MinusOperatorTest extends TestCase
         $operator = new MinusOperator();
         $result = $operator->execute($stack);
 
-        $this->assertEquals(-1, $result->getValue());
+        self::assertEquals(-1, $result->getValue());
 
-        $this->assertCount(1, $stack);
+        self::assertCount(1, $stack);
     }
 
     /**

@@ -17,7 +17,7 @@ class NodeFactoryTest extends TestCase
         $factory = new NodeFactory();
 
         $node = $factory->createNode($token);
-        $this->assertIsObject($node);
+        self::assertIsObject($node);
     }
 
     /**

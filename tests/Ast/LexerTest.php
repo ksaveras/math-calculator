@@ -25,7 +25,7 @@ class LexerTest extends TestCase
         $lexer = new Lexer();
         $nodes = $lexer->parse($input);
 
-        $this->assertEquals($expected, $nodes);
+        self::assertEquals($expected, $nodes);
     }
 
     public function lexerDataProvider(): \Generator
@@ -52,7 +52,7 @@ class LexerTest extends TestCase
         $lexer = new Lexer();
         $nodes = $lexer->buildReversePolishNotation($nodeStream);
 
-        $this->assertEquals($expected, $nodes);
+        self::assertEquals($expected, $nodes);
     }
 
     public function nodeStreamDataProvider(): \Generator

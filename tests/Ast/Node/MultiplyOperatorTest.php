@@ -20,7 +20,7 @@ class MultiplyOperatorTest extends TestCase
         $operator = new MultiplyOperator();
         $result = $operator->execute($stack);
 
-        $this->assertEquals($expected, $result->getValue());
+        self::assertEquals($expected, $result->getValue());
     }
 
     public function testStackSize(): void
@@ -34,9 +34,9 @@ class MultiplyOperatorTest extends TestCase
         $operator = new MultiplyOperator();
         $result = $operator->execute($stack);
 
-        $this->assertEquals(6, $result->getValue());
+        self::assertEquals(6, $result->getValue());
 
-        $this->assertCount(1, $stack);
+        self::assertCount(1, $stack);
     }
 
     /**
