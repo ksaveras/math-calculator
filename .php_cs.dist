@@ -1,4 +1,12 @@
 <?php
+$header = <<<'EOF'
+This file is part of ksaveras/math-calculator
+
+(c) Ksaveras Sakys <xawiers@gmail.com>
+
+For the full copyright and license information, please view the LICENSE
+file that was distributed with this source code.
+EOF;
 
 $finder = PhpCsFixer\Finder::create()
     ->in([__DIR__.'/src', __DIR__.'/tests']);
@@ -8,8 +16,22 @@ return PhpCsFixer\Config::create()
     ->setRules([
         '@Symfony' => true,
         '@Symfony:risky' => true,
+        '@PHP71Migration' => true,
         'array_syntax' => ['syntax' => 'short'],
+        'blank_line_after_opening_tag' => false,
+        'blank_line_before_statement' => [
+            'statements' => [
+                'break',
+                'continue',
+                'return',
+                'switch',
+                'throw',
+                'try',
+            ],
+        ],
+        'declare_strict_types' => true,
         'fopen_flags' => true,
+        'header_comment' => ['header' => $header, 'separate' => 'none'],
         'method_chaining_indentation' => true,
         'no_useless_else' => true,
         'no_superfluous_phpdoc_tags' => ['allow_mixed' => true],

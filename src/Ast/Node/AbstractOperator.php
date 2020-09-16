@@ -1,12 +1,14 @@
-<?php
-
-declare(strict_types=1);
-
+<?php declare(strict_types=1);
+/*
+ * This file is part of ksaveras/math-calculator
+ *
+ * (c) Ksaveras Sakys <xawiers@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 namespace Ksaveras\MathCalculator\Ast\Node;
 
-/**
- * Class AbstractOperator.
- */
 abstract class AbstractOperator implements OperatorInterface
 {
     /**
@@ -19,17 +21,11 @@ abstract class AbstractOperator implements OperatorInterface
      */
     protected $association = self::LEFT_ASSOC;
 
-    /**
-     * {@inheritdoc}
-     */
     public function getPriority(): int
     {
         return $this->priority;
     }
 
-    /**
-     * @return $this
-     */
     public function setPriority(int $priority): self
     {
         $this->priority = $priority;
@@ -37,17 +33,11 @@ abstract class AbstractOperator implements OperatorInterface
         return $this;
     }
 
-    /**
-     * {@inheritdoc}
-     */
     public function getAssociation(): int
     {
         return $this->association;
     }
 
-    /**
-     * @return $this
-     */
     public function setAssociation(int $association): self
     {
         if (!\in_array($association, [static::LEFT_ASSOC, static::RIGHT_ASSOC], true)) {

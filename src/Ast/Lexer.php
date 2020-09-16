@@ -1,5 +1,12 @@
-<?php
-
+<?php declare(strict_types=1);
+/*
+ * This file is part of ksaveras/math-calculator
+ *
+ * (c) Ksaveras Sakys <xawiers@gmail.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 namespace Ksaveras\MathCalculator\Ast;
 
 use Ksaveras\MathCalculator\Ast\Node\MinusOperator;
@@ -7,9 +14,6 @@ use Ksaveras\MathCalculator\Ast\Node\NodeInterface;
 use Ksaveras\MathCalculator\Ast\Node\Number;
 use Ksaveras\MathCalculator\Ast\Node\OperatorInterface;
 
-/**
- * Class Lexer.
- */
 class Lexer
 {
     /**
@@ -55,6 +59,7 @@ class Lexer
             switch (true) {
                 case $node instanceof Number:
                     $output[] = $node;
+
                     break;
                 case $node instanceof OperatorInterface:
                     if ($lastNode instanceof OperatorInterface && $node instanceof MinusOperator) {
@@ -77,6 +82,7 @@ class Lexer
                     }
 
                     $stack[] = $node;
+
                     break;
             }
 
